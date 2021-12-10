@@ -3,70 +3,70 @@
 </div>
 
 <div class="tbody">
-    <table class="table table-striped">
-        <thead>
-        <tr>
-          <th scope="col">Nome</th>
-          <th scope="col">Altura</th>
-          <th scope="col">Peso</th>
-          <th scope="col">Cor do Cabelo</th>
-          <th scope="col">Cor dos Olhos</th>
-          <th scope="col">Cor da pele</th>
-          <th scope="col">Ano de nascimento</th>
-          <th scope="col">Gênero</th>
-          <th scope="col">Criado em:</th>
-          <th scope="col">Editado em:</th>
-        </tr>
-        </thead>
-        <tbody>
-          <tr *ngFor="let people of peoples">
-            <th scope="row">{{ people.name }}</th>
-            <td>
-              <div>
-              {{ people.height }}
-              </div>
-            </td>
-            <td>
-              <div>
-              {{ people.mass }}
-              </div>
-            </td>
-            <td>
-              <div>
-              {{ people.hair_color }}
-              </div>
-            </td>
-            <td>
-              <div>
-              {{ people.skin_color }}
-              </div>
-            </td>
-            <td>
-              <div>
-              {{ people.eye_color }}
-              </div>
-            </td>
-            <td>
-              <div>
-              {{ people.birth_year }}
-              </div>
-            </td>
-            <td>
-              <div>
-              {{ people.gender }}
-              </div>
-            </td>
-            <td>
-              <div>
-              {{ people.created | date : 'dd/MM/yyyy' }}
-              </div>
-            </td>
-            <td>
-              <div>
-              {{ people.edited | date : 'dd/MM/yyyy' }}
-              </div>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">Nome</th>
+        <th scope="col">Altura</th>
+        <th scope="col">Peso</th>
+        <th scope="col">Cor do Cabelo</th>
+        <th scope="col">Cor dos Olhos</th>
+        <th scope="col">Cor da pele</th>
+        <th scope="col">Ano de nascimento</th>
+        <th scope="col">Gênero</th>
+        <th scope="col">Criado em:</th>
+        <th scope="col">Editado em:</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let people of peoples" (click)="getById(people.url)">
+        <th scope="row">{{ people.name }}</th>
+        <td>
+          <div>
+            {{ people.height }}
+          </div>
+        </td>
+        <td>
+          <div>
+            {{ people.mass }}
+          </div>
+        </td>
+        <td>
+          <div>
+            {{ people.hair_color }}
+          </div>
+        </td>
+        <td>
+          <div>
+            {{ people.skin_color }}
+          </div>
+        </td>
+        <td>
+          <div>
+            {{ people.eye_color }}
+          </div>
+        </td>
+        <td>
+          <div>
+            {{ people.birth_year }}
+          </div>
+        </td>
+        <td>
+          <div>
+            {{ people.gender }}
+          </div>
+        </td>
+        <td>
+          <div>
+            {{ people.created | date : 'dd/MM/yyyy' }}
+          </div>
+        </td>
+        <td>
+          <div>
+            {{ people.edited | date : 'dd/MM/yyyy' }}
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
